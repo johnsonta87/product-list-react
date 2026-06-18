@@ -1,0 +1,38 @@
+.user-card {
+    background: #f0f0f0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.user-info {
+    color: #8e8e8e;
+}
+
+.user-email {
+    font-size: 0.9em;
+    color: #858585;
+}
+
+.notification-settings {
+    margin-top: 20px;
+
+    p {
+        color: #878787;
+    }
+
+    button {
+        display: block;
+        margin: 5px 0;
+        padding: 5px 10px;
+        background: #ddd;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &.active {
+            background: #4CAF50;
+            color: white;
+        }
+    }
+}
