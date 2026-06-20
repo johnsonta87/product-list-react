@@ -15,12 +15,9 @@ interface UserCardProps {
 }
 
 export default function UserCard({ user }: UserCardProps) {
-  const [cardUser, setCardUser] = useState(user) // can just pass the user to be set as default immediately unless business requirements expects otherwise
   const { settings, setSettings, lastNotificationCount } = useUserSettings()
 
-  useEffect(() => {
-    setCardUser(user)
-  }, [cardUser, user])
+  // no need to set user to useEffect since it's a prop, it doesnt need to be reactive
 
   const toggleNotification = (index: number) => {
     settings.notifications[index] = !settings.notifications[index]
